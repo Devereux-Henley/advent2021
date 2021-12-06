@@ -1,0 +1,15 @@
+{:deps    {}
+ :paths   ["src/main" "resources"]
+ :aliases {
+           :tests {:extra-paths ["src/test"]
+                   :main-opts   ["-m" "kaocha.runner"]
+                   :extra-deps  {lambdaisland/kaocha {:mvn/version "1.60.945"}}}
+
+           :dev {:extra-paths ["src/test"]
+                 :jvm-opts    ["-XX:-OmitStackTraceInFastThrow"]
+                 :extra-deps  {
+                               org.clojure/tools.namespace {:mvn/version "1.1.1"}
+                               lambdaisland/kaocha         {:mvn/version "1.60.945"}
+                               }}
+           }
+ }

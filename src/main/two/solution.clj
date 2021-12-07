@@ -29,16 +29,11 @@
   (distance-from-start [this]
     (* position depth)))
 
-
-
 (defn to-instruction [instruction]
   (let [[direction magnitude] (clojure.string/split instruction #" ")]
     {:direction (keyword direction) :magnitude (Integer/parseInt magnitude)}
     )
   )
-
-(defn drive-submarine
-  [instruction])
 
 (defn solve-part-one
   []
